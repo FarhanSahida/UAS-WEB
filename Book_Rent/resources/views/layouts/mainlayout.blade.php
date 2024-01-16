@@ -32,6 +32,7 @@
                             <a href="/users" @if(request()->route()->uri == 'users' || request()->route()->uri == 'registered-users') class="active" @endif>Pengguna</a>
                             <a href="/rent-logs" @if(request()->route()->uri == 'rent-logs') class="active" @endif>Log Sewa</a>
                             <a href="/book-rent" @if(request()->route()->uri == 'book-rent') class="active" @endif>Book Rent</a>
+                            <a href="/book-return" @if(request()->route()->uri == 'book-return') class='active' @endif>Book Return</a>
                             <a href="/logout">Logout</a>
                         @else
                             <a href="/profile" @if(request()->route()->uri == 'profile') class="active" @endif>Profile</a>

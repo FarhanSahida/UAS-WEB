@@ -13,13 +13,13 @@
         </thead>
         <tbody>
             @foreach ($rentlog as $item)
-                <tr class="{{ $item->actual_return_date == null ? '' : ($item->return_date < $item->actual_return_date ?  'text-bg-danger' : 'text-bg-success') }}">
+                <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $item->username}}</td>
-                <td>{{ $item->title}}</td>
+                <td>{{ $item->user->slug }}</td>
+                <td>{{ $item->book->title}}</td>
                 <td>{{ $item->rent_date }}</td>
                 <td>{{ $item->return_date }}</td>
-                <td>{{ $item->actual_return_date }}</td>
+                <td class="{{ $item->actual_return_date == null ? '' : ($item->return_date < $item->actual_return_date ?  'text-bg-danger' : 'text-bg-success') }}">{{ $item->actual_return_date }}</td>
                 </tr>
             @endforeach
         </tbody>
